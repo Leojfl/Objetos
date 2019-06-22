@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Objetos</string>
+
+    //
+    <string name="menu_information">Tu información</string>
+    <string name="menu_images">Imagenes</string>
+    <string name="menu_camera">Camara</string>
+    <string name="menu_internet">Internet</string>
+    <string name="menu_gps">GPS</string>
+    <string name="menu_credits">Creditos</string>
+    <string name="menu_exit">Salir</string>
+
+
 </resources>
