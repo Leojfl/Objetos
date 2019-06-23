@@ -37,7 +37,7 @@ public class MyImagesRecyclerViewAdapter extends RecyclerView.Adapter<MyImagesRe
         holder.mItem = mValues.get(position);
         holder.mIdTextView.setText(holder.mItem.getDescription());
         Picasso.get()
-            .load(Integer.valueOf(holder.mItem.getUrl()))
+            .load((holder.mItem.getrUrl()))
             .into(holder.imagePhoto);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {

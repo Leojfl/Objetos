@@ -66,41 +66,38 @@ public class ImagesFragment extends Fragment {
 
 
             imagesList.add(
-                new Images(R.drawable.peso + ""
-                    , "Imagen "));
-
-
-            imagesList.add(
-                new Images(R.drawable.img1 + ""
-                    , "Imagen "));
+                new Images(""
+                    , "Imagen uno ", R.drawable.img1));
 
             imagesList.add(
                 new Images(R.drawable.img2 + ""
-                    , "Imagen "));
+                    , "Imagen dos"
+                    , R.drawable.img2));
 
 
             imagesList.add(
                 new Images(R.drawable.img3 + ""
-                    , "Imagen "));
+                    , "Imagen tres", R.drawable.img3));
 
             imagesList.add(
                 new Images(R.drawable.img4 + ""
-                    , "Imagen "));
+                    , "Imagen cuatro ", R.drawable.img4));
 
 
             imagesList.add(
                 new Images(R.drawable.img5 + ""
-                    , "Imagen "));
+                    , "Imagen cinco", R.drawable.img5));
 
 
             imagesList.add(
                 new Images(R.drawable.img6 + ""
-                    , "Imagen "));
+                    , "Imagen seis", R.drawable.img6));
 
             for (int y = 0; y < 10; y++) {
                 imagesList.add(
                     new Images(R.drawable.peso + ""
-                        , "Imagen " + y));
+                        , "Imagen de pesos con for " + y
+                    , R.drawable.peso));
             }
 
 
