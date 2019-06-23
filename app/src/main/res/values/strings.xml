@@ -10,6 +10,8 @@
     <string name="menu_credits">Creditos</string>
     <string name="menu_exit">Salir</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_internet">InternetActivity</string>
+    <string name="internet_text_url">Introduce tu URL</string>
 
 
 </resources>

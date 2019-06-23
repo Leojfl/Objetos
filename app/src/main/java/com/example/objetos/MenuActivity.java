@@ -76,6 +76,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_information:
                 break;
             case R.id.btn_internet:
+                intentComunication = new Intent(this, InternetActivity.class);
+                startActivity(intentComunication);
+
                 break;
         }
 
