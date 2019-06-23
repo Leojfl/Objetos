@@ -72,6 +72,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.btn_images:
+
+                intentComunication = new Intent(this, ImagesActivity.class);
+                startActivity(intentComunication);
                 break;
             case R.id.btn_information:
                 break;
