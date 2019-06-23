@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Objetos</string>
 
-    //
+    <string name="menu">Menu</string>
     <string name="menu_information">Tu información</string>
     <string name="menu_images">Imagenes</string>
     <string name="menu_camera">Camara</string>
@@ -12,6 +12,9 @@
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_internet">InternetActivity</string>
     <string name="internet_text_url">Introduce tu URL</string>
-
+    <string name="txt_next">Siguiente</string>
+    <string name="txt_back">Atras</string>
+    <string name="txt_take_photo">Tomar</string>
+    <string name="txt_search">Buscar</string>
 
 </resources>
