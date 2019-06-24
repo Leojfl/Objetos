@@ -15,4 +15,6 @@
     <string name="txt_back">Atras</string>
     <string name="txt_take_photo">Tomar</string>
     <string name="txt_search">Buscar</string>
+    <string name="ingresa_tu_nombre">Ingresa tu nombre</string>
+    <string name="fecha">Fecha</string>
 </resources>
