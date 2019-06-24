@@ -13,8 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Datos"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Datos2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
