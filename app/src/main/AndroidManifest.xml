@@ -44,6 +44,10 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MenuActivity">
+        <activity android:name=".Datos2"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Login" />
+        <activity android:name=".Datos">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
