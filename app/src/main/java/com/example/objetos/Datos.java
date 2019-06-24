@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -61,12 +62,22 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onClick(View view) {
+        intentBienvenido = new Intent(this, Bienvenido.class);
+
         switch (view.getId()){
             case R.id.btn_fecha:
                 fecha(view);
                 break;
 
+            case R.id.btn_siguiente:
+                enviarDatos();
+                startActivity(intentBienvenido);
+                Toast.makeText(this, "Abriendo la tercer actividad", Toast.LENGTH_SHORT).show();
 
+                break;
+            case R.id.btn_anterior:
+                finish();
+                break;
         }
 
     }
@@ -88,6 +99,13 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
             datePickerDialog.show();
         }
 
+    }
+
+    public void enviarDatos() {
+        intentBienvenido.putExtra("mjs",etUsuario.getText().toString());
+        intentBienvenido.putExtra("mNacion",sp1.getSelectedItem().toString());
+        intentBienvenido.putExtra("mEdad",etFecha.getText().toString());
+        intentBienvenido.putExtra("mTel",etTelefono.getText().toString());
     }
 
 
