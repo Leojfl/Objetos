@@ -2,6 +2,7 @@ package com.example.objetos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -16,8 +17,9 @@ public class InternetActivity extends AppCompatActivity implements View.OnClickL
 
 
     WebView webView;
-    Button btnSearch;
+    Button btnSearch,btn_internet_next,btn_internet_back;
     TextInputLayout txtUrl;
+    Intent intentComunication;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +30,17 @@ public class InternetActivity extends AppCompatActivity implements View.OnClickL
         webSettings.setJavaScriptEnabled(true);
 
 
+
         btnSearch=findViewById(R.id.btn_search_internet);
         txtUrl=findViewById(R.id.textInputLayout2);
 
+
+
+        btn_internet_back=findViewById(R.id.btn_internet_back);
+        btn_internet_next=findViewById(R.id.btn_internet_next);
+
+        btn_internet_back.setOnClickListener(this);
+        btn_internet_next.setOnClickListener(this);
         btnSearch.setOnClickListener(this);
 
 
@@ -38,8 +48,27 @@ public class InternetActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
-        String text=txtUrl.getEditText().getText().toString();
-        webView.loadUrl(text);
+
+        switch (view.getId())
+        {
+            case R.id.btn_search_internet:
+                String text=txtUrl.getEditText().getText().toString();
+                webView.loadUrl(text);
+                break;
+            case R.id.btn_internet_back:
+                intentComunication = new Intent(this, CameraActivity.class);
+                startActivity(intentComunication);
+                finish();
+
+                break;
+            case R.id.btn_internet_next:
+                intentComunication = new Intent(this, MapsActivity.class);
+                startActivity(intentComunication);
+                finish();
+
+
+                break;
+        }
 
     }
 }
