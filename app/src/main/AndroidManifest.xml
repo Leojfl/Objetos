@@ -12,10 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Datos"></activity>
+        <activity android:name=".Datos2"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Login" />
-        <activity android:name=".Datos2">
+        <activity android:name=".Datos">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

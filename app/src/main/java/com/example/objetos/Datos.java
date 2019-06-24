@@ -57,8 +57,17 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
 
     }
 
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btn_fecha:
+                fecha(view);
+                break;
+
+
+        }
 
     }
 
