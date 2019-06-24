@@ -75,8 +75,13 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
                 Toast.makeText(this, "Abriendo la tercer actividad", Toast.LENGTH_SHORT).show();
 
                 break;
-            case R.id.btn_anterior:
-                finish();
+            case R.id.btn_limpiar:
+                etUsuario.setText("");
+                etFecha.setText("");
+                etTelefono.setText("");
+                rbF.setChecked(false);
+                rbM.setChecked(false);
+                sp1.setSelection(0);
                 break;
         }
 

@@ -23,4 +23,7 @@
     <string name="txtTelefono"></string>
     <string name="btn_siguiente">Siguiente</string>
     <string name="btn_anterior">Anterior</string>
+    <string name="txtCreditos"></string>
+    <string name="btnsSiguiente">Siguiente</string>
+    <string name="btnsAnterior">Anterior</string>
 </resources>
