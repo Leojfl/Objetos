@@ -10,4 +10,9 @@
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
     tools:context=".ImagesFragment"
-    tools:listitem="@layout/fragment_images" />
+    tools:listitem="@layout/fragment_images"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp"
+    android:background="@color/colorBgGray"
+
+    />

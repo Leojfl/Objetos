@@ -26,4 +26,6 @@
     <string name="txtCreditos"></string>
     <string name="btnsSiguiente">Siguiente</string>
     <string name="btnsAnterior">Anterior</string>
+    <string name="ingresa_tu_nombre">Ingresa tu nombre</string>
+    <string name="fecha">Fecha</string>
 </resources>

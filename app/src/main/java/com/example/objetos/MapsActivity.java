@@ -7,10 +7,13 @@ import androidx.fragment.app.FragmentActivity;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -24,12 +27,15 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener {
 
     private GoogleMap mMap;
     private final int REQUEST_ACCESS_FINE = 0;
+    Button btn_next, btn_back;
+    Intent intentComunication;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
@@ -37,6 +43,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
             .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
+        btn_back = findViewById(R.id.btn_maps_back);
+        btn_next = findViewById(R.id.btn_maps_next);
+        btn_next.setOnClickListener(this);
+        btn_back.setOnClickListener(this);
+
+
     }
 
 
@@ -77,7 +91,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
         );
 
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlngMyLocation,16));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlngMyLocation, 16));
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId()) {
+
+            case R.id.btn_maps_back:
+                intentComunication = new Intent(this, InternetActivity.class);
+                startActivity(intentComunication);
+                finish();
+                break;
+            case R.id.btn_maps_next:
+
+
+                break;
+        }
+
     }
 }
