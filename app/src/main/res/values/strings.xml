@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Objetos</string>
-
     <string name="menu">Menu</string>
     <string name="menu_information">Tu información</string>
     <string name="menu_images">Imagenes</string>
@@ -16,5 +15,4 @@
     <string name="txt_back">Atras</string>
     <string name="txt_take_photo">Tomar</string>
     <string name="txt_search">Buscar</string>
-
 </resources>
