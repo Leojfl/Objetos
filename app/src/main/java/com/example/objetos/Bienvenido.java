@@ -37,8 +37,8 @@ public class Bienvenido extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View view) {
-        //i_menu = new Intent(this, MenuActivity.class);
-        s
+        i_menu = new Intent(this, MenuActivity.class);
+
 
 
     }
