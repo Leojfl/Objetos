@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Objetos</string>
+    <string name="txtBienvenido"></string>
+    <string name="txtNacionalidad"></string>
+    <string name="txtEdad"></string>
+    <string name="txtTelefono"></string>
+    <string name="btn_siguiente">Siguiente</string>
+    <string name="btn_anterior">Anterior</string>
 </resources>
