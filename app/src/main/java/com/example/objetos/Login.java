@@ -32,7 +32,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-
         i_info = new Intent(this, Datos.class);
         switch (view.getId()) {
             case R.id.btn_aceptar:
@@ -41,26 +40,18 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 if (validaLogin(sUser) && validaLogin(sPass)) {
                     Toast.makeText(this, "Abriendo actividad: Datos Generales.", Toast.LENGTH_SHORT).show();
                     startActivity(i_info);
-
-
                 } else {
                     Toast.makeText(this, "Verifica tus datos", Toast.LENGTH_SHORT).show();
-
                 }
                 break;
-
             case R.id.btn_cancelar:
                 Toast.makeText(this, "Saliendo.", Toast.LENGTH_SHORT).show();
                 System.exit(0);
                 break;
         }
-
     }
 
     public boolean validaLogin(String cadena) {
         return cadena != null && cadena.trim().length() > 0;
-
-
-
     }
 }

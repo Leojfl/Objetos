@@ -27,7 +27,7 @@ public class CreditosActivity extends AppCompatActivity implements View.OnClickL
 
         tvCreditos = (TextView) findViewById(R.id.textCreditos);
 
-        tvCreditos.setText("Sandra Flores Contreras\nLeonardo Jesús Flores López\nM. en C. Rocío Elizabeth Pulido Alba");
+        tvCreditos.setText("Copyright © App Objetos v1 2019\nSandra Flores Contreras\nLeonardo Jesús Flores López\nM. en C. Rocío Elizabeth Pulido Alba");
     }
 
     @Override
