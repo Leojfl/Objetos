@@ -75,6 +75,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intentComunication);
                 break;
             case R.id.btn_credits:
+                intentComunication = new Intent(this, CreditosActivity.class);
+                startActivity(intentComunication);
                 break;
             case R.id.btn_gps:
                 intentComunication = new Intent(this, MapsActivity.class);
@@ -83,12 +85,10 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.btn_images:
-
                 intentComunication = new Intent(this, ImagesActivity.class);
                 startActivity(intentComunication);
                 break;
-            case R.id.btn_information:
-                break;
+
             case R.id.btn_internet:
                 intentComunication = new Intent(this, InternetActivity.class);
                 startActivity(intentComunication);
