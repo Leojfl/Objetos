@@ -17,47 +17,52 @@
 
         <TextView
             android:id="@+id/textCreditos"
-            android:layout_width="match_parent"
-            android:layout_height="292dp"
+            android:layout_width="340dp"
+            android:layout_height="158dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="180dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:text="@string/txtCreditos"
+            android:textColor="#009688"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btns_ant"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="133dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/btnsAnterior"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btns_sig"
+            app:layout_constraintHorizontal_bias="0.623"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btns_sig"
+            app:layout_constraintTop_toBottomOf="@+id/textCreditos"
+            app:layout_constraintVertical_bias="0.364"
             tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/btns_sig"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
+            android:layout_width="133dp"
+            android:layout_height="44dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/btnsSiguiente"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textCreditos" />
+            app:layout_constraintTop_toBottomOf="@+id/textCreditos"
+            app:layout_constraintVertical_bias="0.364" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
