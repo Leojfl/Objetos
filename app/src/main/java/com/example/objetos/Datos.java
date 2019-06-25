@@ -78,7 +78,7 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
                         if (sp1.getSelectedItemPosition() != 0){
                             enviarDatos();
                             startActivity(intentBienvenido);
-                            Toast.makeText(this, "Abriendo la tercer actividad", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "Actividad Bienvenido", Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(this, "Selecciona una nacionalidad", Toast.LENGTH_SHORT).show();
                         }

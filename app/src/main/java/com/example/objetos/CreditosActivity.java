@@ -37,7 +37,7 @@ public class CreditosActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()){
             case R.id.btns_sig:
                 startActivity(in);
-                Toast.makeText(this, "Img", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Actividad Imágenes", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btns_ant:
                 finish();
