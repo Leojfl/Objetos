@@ -40,10 +40,10 @@ public class Bienvenido extends AppCompatActivity implements View.OnClickListene
 
         obtnerDatos();
 
-        tvBienvenido.setText(sBienvenido);
-        tvNacion.setText(sNacion);
-        tvTel.setText(sTel);
-        tvEdad.setText(edadReal()+"");
+        tvBienvenido.setText("¡Bienvenido "+sBienvenido+"!");
+        tvNacion.setText("Su nacionalidad es: "+sNacion);
+        tvTel.setText("Teléfono: +52 1 "+sTel);
+        tvEdad.setText("Usted tiene : "+edadReal()+" años");
 
 
     }
