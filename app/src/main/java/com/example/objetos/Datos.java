@@ -14,7 +14,6 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -23,7 +22,7 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
 
     EditText etUsuario, etTelefono, etFecha;
     Button botonFecha;
-    String fechaUser, nomUser, nacionUser, telUser;
+    String sFechaUser, sNomUser, sNacionUser, sTelUser;
     int dia, mes, anio;
     RadioButton rbF, rbM;
     Spinner sp1;
@@ -70,13 +69,35 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
                 break;
 
             case R.id.btn_siguiente:
-                enviarDatos();
-                startActivity(intentBienvenido);
-                Toast.makeText(this, "Abriendo la tercer actividad", Toast.LENGTH_SHORT).show();
+                sNomUser = etUsuario.getText().toString();
+                sTelUser = etTelefono.getText().toString();
+                sFechaUser= etFecha.getText().toString();
 
+                if ((validaCadena(sNomUser) && validaCadena(sTelUser)) && validaCadena(sFechaUser) ) {
+                    if(rbF.isChecked() == true|| rbM.isChecked()==true){
+                        if (sp1.getSelectedItemPosition() != 0){
+                            enviarDatos();
+                            startActivity(intentBienvenido);
+                            Toast.makeText(this, "Actividad Bienvenido", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(this, "Selecciona una nacionalidad", Toast.LENGTH_SHORT).show();
+                        }
+                    }else{
+                        Toast.makeText(this, "Selecciona un sexo", Toast.LENGTH_SHORT).show();
+                    }
+
+                } else {
+                    Toast.makeText(this, "Verifica tus datos", Toast.LENGTH_SHORT).show();
+
+                }
                 break;
-            case R.id.btn_anterior:
-                finish();
+            case R.id.btn_limpiar:
+                etUsuario.setText("");
+                etFecha.setText("");
+                etTelefono.setText("");
+                rbF.setChecked(false);
+                rbM.setChecked(false);
+                sp1.setSelection(0);
                 break;
         }
 
@@ -108,5 +129,8 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
         intentBienvenido.putExtra("mTel",etTelefono.getText().toString());
     }
 
+    public boolean validaCadena(String cadena) {
+        return cadena != null && cadena.trim().length() > 0;
+    }
 
 }

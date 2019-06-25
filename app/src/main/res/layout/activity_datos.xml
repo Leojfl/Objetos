@@ -16,6 +16,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         android:hint="@string/ingresa_tu_nombre"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
