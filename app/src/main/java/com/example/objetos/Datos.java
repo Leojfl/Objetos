@@ -71,6 +71,12 @@ public class Datos extends AppCompatActivity implements View.OnClickListener {
             case R.id.btn_siguiente:
                 sNomUser = etUsuario.getText().toString();
                 sTelUser = etTelefono.getText().toString();
+
+
+
+
+
+
                 sFechaUser= etFecha.getText().toString();
 
                 if ((validaCadena(sNomUser) && validaCadena(sTelUser)) && validaCadena(sFechaUser) ) {
